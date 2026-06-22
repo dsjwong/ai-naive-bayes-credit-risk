@@ -40,3 +40,19 @@ jupyter notebook naive_bayes_credit_risk.ipynb
 ## Dataset Features
 
 Typical features include: loan amount, interest rate, income, employment length, loan intent, loan grade, home ownership, historical defaults, and credit history length.
+
+## Environment
+
+Developed and tested with:
+
+- Python 3.9+
+- Jupyter Notebook / JupyterLab
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt      # if provided
+# or manually: pip install numpy pandas matplotlib scikit-learn torch torchvision
+```
+
+Open notebooks in order — each notebook builds on outputs from the previous one.
