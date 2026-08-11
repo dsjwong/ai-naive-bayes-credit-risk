@@ -1,17 +1,17 @@
 # Naïve Bayes Credit Risk Classification
 
-Applies the Naïve Bayes algorithm to classify loan applicants as low or high credit risk using a cleaned financial dataset.
+University coursework applying the Naïve Bayes algorithm to classify loan applicants as defaulting or non-defaulting using a cleaned credit risk dataset.
 
 ## Overview
 
-Credit risk assessment is a classic classification problem in finance. This project implements Naïve Bayes from first principles (or via scikit-learn) and evaluates it against a real-world credit risk dataset, demonstrating how probabilistic classifiers handle noisy financial features.
+Credit risk assessment is a classic classification problem in finance. This project implements Naïve Bayes from first principles — converting the raw dataset into NumPy arrays, computing conditional probabilities from occurrence counts, and using them to predict loan default — then evaluates the classifier against a held-out test set.
 
 ## Tech Stack
 
 - **Language:** Python 3
-- **Libraries:** pandas, NumPy, scikit-learn, matplotlib
+- **Libraries:** pandas, NumPy, scikit-learn (train/test split only), matplotlib, seaborn, tqdm
 - **Dataset:** Credit Risk Dataset (cleaned)
-- **Environment:** Jupyter Notebook
+- **Environment:** Jupyter Notebook / Google Colab
 
 ## Key Concepts
 
@@ -32,27 +32,35 @@ ai-naive-bayes-credit-risk/
 
 ## How to Run
 
+Developed and tested with Python 3.9+.
+
 ```bash
-pip install pandas numpy scikit-learn matplotlib jupyter
+pip install pandas numpy scikit-learn matplotlib seaborn tqdm jupyter
 jupyter notebook naive_bayes_credit_risk.ipynb
 ```
 
+`credit_risk_dataset_cleaned.csv` must be in the same directory as the notebook (or uploaded to the working directory if running in Google Colab).
+
 ## Dataset Features
 
-Typical features include: loan amount, interest rate, income, employment length, loan intent, loan grade, home ownership, historical defaults, and credit history length.
+- `person_age`: The age of the person
+- `person_income`: The monthly income of the person
+- `person_home_ownership`: The ownership status of their house. `MORTGAGE` or `RENT`
+- `person_emp_length`: The number of years the person has worked at their current job
+- `loan_intent`: The reason for the loan application. `MEDICAL`, `EDUCATION`, `PERSONAL`, `VENTURE`, or `DEBTCONSOLIDATION`
+- `loan_grade`: The grade assigned to the loan based on creditworthiness, from `A` (most trustworthy) to `D` (least)
+- `cb_person_default_on_file`: Whether the person has defaulted before. `Y` or `N`
+- `loan_status` (target): Whether the loan was defaulted. `0` = non-default, `1` = default
 
-## Environment
+## Results
 
-Developed and tested with:
+Evaluated on a held-out test split (20% of the data, `test_size=0.2`, `random_state=2211`; 4,784 of 23,919 rows):
 
-- Python 3.9+
-- Jupyter Notebook / JupyterLab
+| Metric | Value |
+|---|---|
+| Accuracy | 0.8221 (82.21%) |
+| Precision | 0.6289 |
+| Recall | 0.3424 |
+| F1-score | 0.4434 |
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt      # if provided
-# or manually: pip install numpy pandas matplotlib scikit-learn torch torchvision
-```
-
-Open notebooks in order — each notebook builds on outputs from the previous one.
+Source: `naive_bayes_credit_risk.ipynb`, Section 3 (Model evaluation) output.
