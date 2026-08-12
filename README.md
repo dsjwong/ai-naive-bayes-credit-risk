@@ -27,7 +27,7 @@ Credit risk assessment is a classic classification problem in finance. This proj
 ```
 ai-naive-bayes-credit-risk/
 ├── naive_bayes_credit_risk.ipynb      # Main notebook
-└── credit_risk_dataset_cleaned.csv       # Preprocessed dataset (not committed — download separately, see Dataset section)
+└── credit_risk_dataset_cleaned.csv       # Preprocessed dataset (included in repo, see Dataset section)
 ```
 
 ## How to Run
@@ -42,7 +42,7 @@ jupyter notebook naive_bayes_credit_risk.ipynb
 - **Source:** Kaggle — Credit Risk Dataset (https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
 - **Features:** loan amount, interest rate, income, employment length, loan intent, loan grade, home ownership, historical defaults, and credit history length
 
-`credit_risk_dataset_cleaned.csv` is not committed to this repository (third-party dataset, kept out of version control). Download the dataset from the source above, apply the standard cleaning steps in the notebook, and place the resulting file at the repo root as `credit_risk_dataset_cleaned.csv` before running the notebook.
+`credit_risk_dataset_cleaned.csv` is included in this repository as a preprocessed/cleaned copy for convenience so the notebook runs immediately after cloning. Credit for the original data belongs to the source above; see it for the original license and citation terms.
 
 ## Environment
 
