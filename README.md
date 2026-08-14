@@ -41,16 +41,12 @@ jupyter notebook naive_bayes_credit_risk.ipynb
 
 `credit_risk_dataset_cleaned.csv` must be in the same directory as the notebook (or uploaded to the working directory if running in Google Colab).
 
-## Dataset Features
+## Dataset
 
-- `person_age`: The age of the person
-- `person_income`: The monthly income of the person
-- `person_home_ownership`: The ownership status of their house. `MORTGAGE` or `RENT`
-- `person_emp_length`: The number of years the person has worked at their current job
-- `loan_intent`: The reason for the loan application. `MEDICAL`, `EDUCATION`, `PERSONAL`, `VENTURE`, or `DEBTCONSOLIDATION`
-- `loan_grade`: The grade assigned to the loan based on creditworthiness, from `A` (most trustworthy) to `D` (least)
-- `cb_person_default_on_file`: Whether the person has defaulted before. `Y` or `N`
-- `loan_status` (target): Whether the loan was defaulted. `0` = non-default, `1` = default
+- **Source:** Kaggle — Credit Risk Dataset (https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
+- **Features:** loan amount, interest rate, income, employment length, loan intent, loan grade, home ownership, historical defaults, and credit history length
+
+`credit_risk_dataset_cleaned.csv` is included in this repository as a preprocessed/cleaned copy for convenience so the notebook runs immediately after cloning. Credit for the original data belongs to the source above; see it for the original license and citation terms.
 
 ## Results
 
